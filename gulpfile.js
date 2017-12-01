@@ -21,7 +21,7 @@ gulp.task('imageop', function(cb) {
         progressive: true,
         interlaced: true
     	}))
-			.pipe(gulp.dest('public/images'))
+			.pipe(gulp.dest('src/img/1'))
 				.on('end', cb)
 				.on('error', cb);
 });
@@ -62,4 +62,14 @@ gulp.task("watch", ['browser-sync', 'sass', 'pug'], function(){
 	gulp.watch('src/sass/**/*.sass', ['sass']);
 	gulp.watch('src/jade/*.pug', ['pug']);
 	gulp.watch('src/*.html', browserSync.reload);
+});
+
+gulp.task('build', ['clean',], function(){
+	
+	var buildCss = gulp.src(['src/css/**/*.css'])
+		.pipe(gulp.dest('dist/css'));
+	var buildFonts = gulp.src('src/fonts/**/*')
+		.pipe(gulp.dest('dist/fonts'));
+	var buildHtml = gulp.src('src/**/*.html')
+		.pipe(gulp.dest('dist'));
 });
