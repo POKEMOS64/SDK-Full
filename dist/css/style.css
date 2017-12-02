@@ -13,7 +13,8 @@ body {
       max-width: 760px; } }
   @media (max-width: 760px) {
     .middle {
-      max-width: 320px; } }
+      max-width: 80%;
+      min-width: 320px; } }
 
 img,
 iframe {
@@ -297,7 +298,11 @@ header .div-middle {
     position: absolute;
     top: 0;
     left: 0;
-    width: 760px; }
+    display: none; }
+    @media (max-width: 1151px) {
+      header .div-middle:after {
+        display: block;
+        max-width: 760px; } }
   @media (max-width: 1151px) {
     header .div-middle {
       -webkit-box-ordinal-group: 4;
@@ -421,6 +426,12 @@ header .rectangle-14 {
     border-bottom: 1px solid #e5e5e5;
     background: transparent;
     padding-top: 5px; }
+    @media (max-width: 760px) {
+      .tab_slide__search input[type='search'] {
+        position: relative;
+        z-index: 99; }
+        .tab_slide__search input[type='search']:focus {
+          background: #fff; } }
   .tab_slide__search .click-search {
     position: relative;
     margin-left: -20px;
@@ -441,6 +452,9 @@ header .rectangle-14 {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(../img/ic_lock_outline_24px.svg); }
+  @media (max-width: 760px) {
+    .tab_slide .lock {
+      margin-left: 5px; } }
 
 .tab_slide__info-link {
   position: relative;
@@ -557,7 +571,9 @@ header .rectangle-14 {
           border: 1px solid transparent;
           -webkit-border-radius: 25px;
                   border-radius: 25px;
-          cursor: pointer; }
+          cursor: pointer;
+          position: absolute;
+          right: 20px; }
           .inside_tabs li .oval svg {
             margin: 0 auto;
             margin-left: 15px;
@@ -567,9 +583,7 @@ header .rectangle-14 {
                 -ms-transform: rotate(90deg);
                     transform: rotate(90deg); }
             .inside_tabs li .oval svg path {
-              fill: transparent; }
-        .inside_tabs li p {
-          width: 55%; } }
+              fill: transparent; } }
     @media (min-width: 760px) {
       .inside_tabs li .oval {
         display: none; } }
@@ -599,7 +613,12 @@ header .rectangle-14 {
       -ms-flex-direction: column;
       flex-direction: column; }
       .inside_tabs li {
-        max-width: 100%; } }
+        max-width: 100%; }
+        .inside_tabs li p {
+          width: 55%;
+          margin: 0 auto; }
+          .inside_tabs li p svg {
+            right: 34px; } }
   .inside_tabs_info {
     margin-top: 94px;
     display: none; }
@@ -743,6 +762,9 @@ header .rectangle-14 {
               @media (max-width: 1151px) {
                 .inside_tabs_info__box .text-block_box li:nth-child(7) {
                   max-width: 100%; } }
+            @media (max-width: 760px) {
+              .inside_tabs_info__box .text-block_box li {
+                max-width: 95% !important; } }
           .inside_tabs_info__box .text-block_box.link li {
             max-width: 400px;
             margin: 3px;

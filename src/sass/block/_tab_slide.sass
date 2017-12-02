@@ -41,6 +41,11 @@
 				border-bottom: 1px solid #e5e5e5
 				background: transparent
 				padding-top: 5px
+				@media(max-width:760px)
+					position: relative
+					z-index: 99
+					&:focus
+						background: #fff
 			.click-search
 					position: relative
 					margin-left: -20px
@@ -60,6 +65,8 @@
 		background-position: center
 		background-repeat: no-repeat
 		background-image: url(../img/ic_lock_outline_24px.svg)
+		@media(max-width:760px)
+			margin-left: 5px
 	&__info-link
 		position: relative
 		display: none
@@ -176,6 +183,8 @@
 				border: 1px solid transparent
 				border-radius: 25px
 				cursor: pointer
+				position: absolute
+				right: 20px
 				svg
 					margin: 0 auto
 					margin-left: 15px
@@ -184,8 +193,7 @@
 					transform: rotate(90deg)
 					path
 						fill: transparent
-			p
-				width: 55%
+			
 		@media(min-width:760px)
 			.oval
 				display: none
@@ -217,7 +225,11 @@
 		flex-direction: column
 		li
 			max-width: 100%
-			
+			p
+				width: 55%
+				margin: 0 auto
+				svg
+					right: 34px
 			
 
 	&_info
@@ -350,6 +362,8 @@
 							max-width: 256px*2.18
 							@media(max-width:1151px)
 								max-width: 100%
+						@media(max-width:760px)
+							max-width: 95% !important
 					&.link
 						li
 							max-width: 400px

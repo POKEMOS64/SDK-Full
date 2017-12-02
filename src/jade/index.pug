@@ -487,7 +487,7 @@ html(lang="rus")
 							p © 2014–2017   ФГБУ «ФЦТ»
 							p Правовая информация
 							p.stop
-								img(src="img/korr.svg")
+								img(src="img/korr.svg") 
 								span Противодействие коррупции
 						div
 							p 123557, Москва, <br>Пресненский Вал, <br>д.19 стр.1 
@@ -503,23 +503,4 @@ html(lang="rus")
 							button#modal(type="submit")
 								| Отправить обращение
 		script(src= 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js').
-		script(type='text/javascript').
-			$(function(){
-				$('.tab_slide__click ul ').on('click','li:not(.active)',function(){
-				$(this)
-					.addClass('active').siblings().removeClass('active')
-					.closest('.tab_slide').find('.tab_slide__info-link').removeClass('active').eq($(this).index()).addClass('active');
-				});
-			});
-			$(function(){
-				$('ul.inside_tabs').on('click','li:not(.active)',function(){
-				$(this)
-					.addClass('active').siblings().removeClass('active')
-					.closest('.tab_slide__info-link.active').find('.inside_tabs_info').removeClass('active').eq($(this).index()).addClass('active');
-				});
-			});
-			$(function(){
-				$('.oval').click(function(){
-					$(".inside_tabs li").show(400);
-				});
-			});
+		script(src= 'js/app.js').
